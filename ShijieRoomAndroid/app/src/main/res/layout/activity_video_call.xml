@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".VideoCallActivity">
+
+    <RelativeLayout
+        android:id="@+id/localView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/dark_black"
+        android:layout_marginBottom="40dp" >
+
+        <GridView
+            android:id="@+id/remote_view_group"
+            android:numColumns="auto_fit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </GridView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/dark_black"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="@dimen/bottom_btn_width"
+            android:layout_height="@dimen/bottom_btn_high"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="@dimen/bottom_btn_margin"
+            android:src="@drawable/switch_camera" />
+
+        <ImageView
+            android:id="@+id/btn_micphone"
+            android:layout_width="@dimen/bottom_btn_width"
+            android:layout_height="@dimen/bottom_btn_high"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/micphone" />
+
+        <ImageView
+            android:id="@+id/btn_terminate"
+            android:layout_width="@dimen/bottom_btn_width"
+            android:layout_height="@dimen/bottom_btn_high"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/btn_endcall" />
+
+        <ImageView
+            android:id="@+id/btn_video"
+            android:layout_width="@dimen/bottom_btn_width"
+            android:layout_height="@dimen/bottom_btn_high"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/video" />
+
+        <ImageView
+            android:id="@+id/btn_switch_role"
+            android:layout_width="@dimen/bottom_btn_width"
+            android:layout_height="@dimen/bottom_btn_high"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="80dp"
+            android:src="@drawable/switch_user" />
+
+    </LinearLayout>
+
+</RelativeLayout>

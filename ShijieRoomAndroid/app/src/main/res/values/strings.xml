@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">视界</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="button_call">Call</string>
+    <string name="call">Call</string>
+    <string name="rl240_fixed">320x180 </string>
+    <string name="rl240_adaptive">320x180 [自适应]</string>
+    <string name="rl360_fixed">640x360 </string>
+    <string name="rl360_adaptive">640x360 [自适应]</string>
+    <string name="rl540_fixed">960x540 </string>
+    <string name="rl540_adaptive">960x540 [自适应]</string>
+    <string name="rl720_fixed">1280x720 </string>
+    <string name="rl720_adaptive">1280x720 [自适应]</string>
+    <string name="resolution">分辨率</string>
+    <string name="user_name">用户名</string>
+    <string name="server_address">服务器</string>
+    <string name="room_name">房间名</string>
+    <string name="versionInfo">ShiJie SDK V3.1.2</string>
+
+    <string name="btn_start">开始</string>
+    <string name="withoutVideo">纯音频</string>
+    <string name="btn_end">结束</string>
+    <string name="kicked_tip">相同用户名被他人登录</string>
+    <string name="link_wrong_role_tip">[非直播房间，不可用]</string>
+    <string name="audio_only_mode">[非视频房间，不可用]</string>
+
+    <string name="role">角色</string>
+    <string name="role_host">直播-主播</string>
+    <string name="role_viewer">直播-观众</string>
+    <string name="role_attendee">会议-与会者</string>
+
+    <string name="room_tip">房间号只能包含字母数字</string>
+    <string name="user_tip">用户名只能包含字母数字</string>
+    <string name="user_hint">请输入用户名（字母数字）</string>
+    <string name="room_hint">请输入房间名（字母数字）</string>
+    <string name="server_address_hit">请输入服务器（缺省：mcu.sjsdk.com）</string>
+    <string name="empty_hint">输入不能为空</string>
+
+
+
+</resources>

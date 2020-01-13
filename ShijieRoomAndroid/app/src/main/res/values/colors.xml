@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blink_text_grey">#333333</color>
+    <color name="blink_blue">#3A83F8</color>
+    <color name="dark_black">#CC262626</color>
+    <color name="name_red">#FFAC0F0D</color>
+
+</resources>

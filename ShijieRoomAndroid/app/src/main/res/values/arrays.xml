@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="resolution_items">
+        <item>320x180</item>
+        <item>320x180 [自适应]</item>
+        <item>640x360</item>
+        <item>640x360 [自适应]</item>
+        <item>960x540</item>
+        <item>960x540 [自适应]</item>
+        <item>1280x720</item>
+        <item>1280x720 [自适应]</item>
+    </string-array>
+
+    <string-array name="role_items">
+        <item>直播-主播</item>
+        <item>直播-观众</item>
+        <item>会议-与会者</item>
+    </string-array>
+
+</resources>

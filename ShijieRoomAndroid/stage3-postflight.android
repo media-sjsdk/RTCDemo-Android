@@ -1,0 +1,60 @@
+build_arch=${TARGET_ARCH}
+
+if [ $build_arch = arm64 ]; then
+arm_arch=arm64-v8a
+fi
+
+if [ $build_arch = armv7 ]; then
+arm_arch=armeabi-v7a
+fi
+
+JAR_SRC=${OBJ}/../../conference_only/dist
+ROOM_JAR=${JAR_SRC}/shijie_room_sdk${JAR}
+
+md5File=$(ls ${ROOM_JAR}.* 2>/dev/null)
+if [ "$md5File" ]; then
+    ROOM_JAR=$md5File
+fi
+
+SO_DIR=${ROOT}/pack/release_sdk_demo/ShijieRoomAndroid/app/src/main/jniLibs/${arm_arch}
+JAR_DIR=${ROOT}/pack/release_sdk_demo/ShijieRoomAndroid/app/libs
+
+mkdir -p ${SO_DIR}
+
+SO_SRC=${OBJ}/../../conference_only/dist
+
+SHARED_LIB=${SO_SRC}/libc++_shared.so
+ROOM_LIB=${SO_SRC}/libShijieRoom.so
+
+md5File=$(ls ${SHARED_LIB}.* 2>/dev/null)
+if [ "$md5File" ]; then
+    SHARED_LIB=$md5File  
+fi
+
+md5File=$(ls ${ROOM_LIB}.* 2>/dev/null)
+if [ "$md5File" ]; then
+    ROOM_LIB=$md5File
+fi
+
+#cp $SHARED_LIB  ${SO_DIR}/libc++_shared.so
+#cp ${ROOM_LIB} ${SO_DIR}/
+#cp $ROOM_JAR ${JAR_DIR}/shijie_room_sdk${JAR}
+
+cp $SHARED_LIB  ${SO_DIR}
+cp ${ROOM_LIB} ${SO_DIR}
+cp $ROOM_JAR ${JAR_DIR}
+
+
+rm -r -f ${OBJ}/release
+mkdir ${OBJ}/release
+
+rm -r -f ${OBJ}/dist
+rm -r -f ${OBJ}/extra
+rm -r -f ${SRC}/app/build/outputs/apk/debug/*.apk
+mkdir ${OBJ}/dist
+mkdir ${OBJ}/extra
+cp -R ${SRC}  ${OBJ}/dist
+rm -r -f ${OBJ}/dist/stage*flight*
+rm -r -f ${OBJ}/dist/ShijieRoomAndroid/app/build
+python ${ROOT}/build_system/ditto.py ${OBJ}/dist/  ${OBJ}/extra/
+python ${SRC}/../../generate-release-zip.py -e ${OBJ}/extra -b ${OBJ}/dist -p ShiJieAndroidDemoCode --project ${PROJECT}
