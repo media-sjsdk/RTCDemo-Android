@@ -4,7 +4,8 @@
 
 **客服邮箱：support@sjsdk.com**
 
-**[Demo源码下载地址]http://www.sjsdk.com/download.html)**
+**[Demo源码下载地址](http://www.sjsdk.com/download.html)**
+
 **[SDK文档源码地址](http://www.sjsdk.com/doc.html)**
 
 
